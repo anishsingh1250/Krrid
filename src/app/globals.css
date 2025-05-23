@@ -1,50 +1,26 @@
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
-  --primary: #25C6F5;
-  --secondary: #0F172A;
-  --accent: #FF3B3F;
   --background: #ffffff;
-  --text: #181A1B;
+  --foreground: #171717;
+}
+
+/* @theme inline { */
+  /* --color-background: var(--background); */
+  /* --color-foreground: var(--foreground); */
+  /* --font-sans: var(--font-geist-sans); */
+  /* --font-mono: var(--font-geist-mono); */
+/* } */
+/*  */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
 }
 
 body {
-  background-color: var(--background);
-  color: var(--text);
-  font-family: 'Inter', sans-serif;
-}
-
-@layer components {
-  .btn-primary {
-    @apply bg-primary text-white rounded-lg px-6 py-3 font-heading font-semibold 
-    transition-all duration-300 hover:scale-105 hover:shadow-lg
-    focus:outline-none focus:ring-2 focus:ring-primary/60;
-  }
-
-  .btn-secondary {
-    @apply bg-white text-black border-2 border-black/10 rounded-lg px-6 py-3 
-    font-heading font-semibold transition-all duration-300 
-    hover:border-primary hover:text-primary focus:outline-none focus:ring-2;
-  }
-
-  .nav-link {
-    @apply text-black/80 hover:text-primary transition-colors duration-200 
-    font-medium relative after:absolute after:bottom-0 after:left-0 
-    after:h-0.5 after:w-0 hover:after:w-full after:bg-primary 
-    after:transition-all after:duration-300;
-  }
-
-  .input-field {
-    @apply w-full px-4 py-3 rounded-lg border border-gray-200 
-    focus:ring-2 focus:ring-primary/60 focus:border-transparent 
-    transition-all duration-200;
-  }
-
-  .card {
-    @apply bg-white rounded-xl p-6 shadow-sm hover:shadow-md 
-    transition-all duration-300 border border-gray-100;
-  }
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
 }

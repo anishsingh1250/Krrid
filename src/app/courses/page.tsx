@@ -31,29 +31,20 @@ export default function CoursesPage() {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {courses.map((course, index) => (
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              key={index} 
-              className="card group hover:scale-105 cursor-pointer"
-            >
-              <div className="h-48 bg-gray-100 rounded-lg mb-4 overflow-hidden">
-                <div className="w-full h-full bg-primary/10 flex items-center justify-center">
-                  <span className="text-4xl text-primary">♟</span>
+            <div key={index} className="border rounded-xl overflow-hidden">
+              <div className="h-48 bg-gray-100"></div>
+              <div className="p-6">
+                <h2 className="text-xl font-heading font-semibold mb-2">{course.title}</h2>
+                <div className="flex gap-4 text-sm text-gray-600 mb-3">
+                  <span>{course.level}</span>
+                  <span>{course.duration}</span>
                 </div>
+                <p className="text-gray-600 mb-4">{course.description}</p>
+                <button className="bg-primary text-white rounded-lg px-4 py-2 font-heading">
+                  Enroll Now
+                </button>
               </div>
-              <h2 className="text-xl font-heading font-semibold mb-2 group-hover:text-primary transition-colors">{course.title}</h2>
-              <div className="flex gap-4 text-sm text-gray-600 mb-3">
-                <span className="bg-primary/10 text-primary px-3 py-1 rounded-full">{course.level}</span>
-                <span className="bg-gray-100 px-3 py-1 rounded-full">{course.duration}</span>
-              </div>
-              <p className="text-gray-600 mb-4">{course.description}</p>
-              <button className="btn-primary w-full">
-                Enroll Now
-              </button>
-            </motion.div>
+            </div>
           ))}
         </div>
       </main>
