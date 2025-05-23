@@ -10,7 +10,7 @@ interface GameState {
   player_black: string | null;
 }
 
-export function useRealtimeChessGame(gameId: string) {
+export function useRealtimeChessGame(gameId: string, _userId: string) {
   const [game, setGame] = useState<GameState | null>(null);
 
   // Fetch initial game state
@@ -55,4 +55,4 @@ export function useRealtimeChessGame(gameId: string) {
   );
 
   return { game, makeMove };
-} 
+}

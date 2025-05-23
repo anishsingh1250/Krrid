@@ -69,12 +69,12 @@ export default function ChessGameReplay() {
   useEffect(() => {
     if (currentMoveIndex >= 0 && moves.length > 0) {
       const chess = new Chess();
-      
+
       // Apply all moves up to currentMoveIndex
       for (let i = 0; i <= currentMoveIndex; i++) {
         chess.move(moves[i]);
       }
-      
+
       setFen(chess.fen());
     } else {
       setFen("start");
@@ -251,7 +251,7 @@ export default function ChessGameReplay() {
               </div>
               <div className="flex justify-center text-xl text-primary font-bold">{gameInfo.result}</div>
             </div>
-            
+
             <div className="mt-2">
               <div className="flex gap-2 items-center"><span className="font-semibold">Date:</span> {gameInfo.date}</div>
               <div className="flex gap-2 items-center"><span className="font-semibold">Event:</span> {gameInfo.event}</div>
@@ -262,7 +262,7 @@ export default function ChessGameReplay() {
                 <span className="font-semibold">Move:</span> {currentMoveIndex + 1} / {moves.length}
               </div>
             </div>
-            
+
             <div className="font-semibold mt-4 mb-2">Move History:</div>
             <div className="border border-gray-200 rounded p-2 bg-gray-50 h-48 overflow-y-auto text-sm">
               <div className="flex flex-wrap gap-x-2">
@@ -289,4 +289,4 @@ export default function ChessGameReplay() {
       </div>
     </div>
   );
-} 
+}

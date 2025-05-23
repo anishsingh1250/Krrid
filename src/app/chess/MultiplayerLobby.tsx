@@ -10,7 +10,7 @@ export default function MultiplayerLobby({ userId }: { userId: string }) {
   async function createGame() {
     setLoading(true);
     const startingFEN = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
-    const { data, error } = await supabase
+    const { data, _error } = await supabase
       .from("games")
       .insert([{ player_white: userId, fen: startingFEN }])
       .select()
@@ -49,4 +49,4 @@ export default function MultiplayerLobby({ userId }: { userId: string }) {
       <button onClick={joinGame} disabled={loading} className="bg-black text-white px-6 py-2 rounded-lg">Join Game</button>
     </div>
   );
-} 
+}

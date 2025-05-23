@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Chessboard } from "react-chessboard";
 import { Chess } from "chess.js";
 
@@ -183,4 +183,4 @@ export default function ChessboardUI(props: ChessboardUIProps) {
       </div>
     </div>
   );
-} 
+}
