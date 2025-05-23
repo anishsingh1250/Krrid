@@ -1,4 +1,3 @@
-
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
@@ -10,22 +9,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      fontSize: {
-        '7xl': '4.5rem',
-        '6xl': '3.75rem',
-        '5xl': '3rem',
-      },
       colors: {
-        primary: '#25C6F5',
-        black: '#181A1B',
-        white: '#FFFFFF',
-        gray: {
-          100: '#F5F7FA',
-          200: '#E5E7EB',
-          300: '#D1D5DB',
-          400: '#9CA3AF',
-        },
-        accent: '#FF3B3F',
+        primary: 'var(--primary)',
+        secondary: 'var(--secondary)',
+        accent: 'var(--accent)',
+        background: 'var(--background)',
+        text: 'var(--text)',
       },
       fontFamily: {
         heading: ['var(--font-geist-sans)', 'system-ui', 'sans-serif'],
