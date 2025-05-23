@@ -1,34 +1,48 @@
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { Chess } from 'chess.js';
-import { Stockfish } from 'stockfish-wasm';
+import * as stockfish from 'stockfish';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method not allowed' });
   }
 
-  const { fen, level = 10 } = req.body;
-  const game = new Chess(fen);
+  const { fen } = req.body;
+  if (!fen) {
+    return res.status(400).json({ message: 'FEN string is required' });
+  }
 
-  if (game.isGameOver()) {
+  const chess = new Chess(fen);
+  if (chess.isGameOver()) {
     return res.status(400).json({ message: 'Game is already over' });
   }
 
-  const stockfish = await Stockfish();
-  stockfish.postMessage('uci');
-  stockfish.postMessage(`position fen ${fen}`);
-  stockfish.postMessage(`go depth ${level}`);
+  // Initialize Stockfish
+  const engine = stockfish();
+  
+  return new Promise((resolve) => {
+    engine.onmessage = (event: any) => {
+      const message = event.data;
+      if (message.startsWith('bestmove')) {
+        const move = message.split(' ')[1];
+        chess.move({
+          from: move.substring(0, 2),
+          to: move.substring(2, 4),
+          promotion: move.length === 5 ? move[4] : undefined
+        });
+        resolve(res.status(200).json({ 
+          fen: chess.fen(),
+          move: move,
+          turn: chess.turn()
+        }));
+        engine.terminate();
+      }
+    };
 
-  let bestMove = '';
-  stockfish.onmessage = (msg: string) => {
-    if (msg.startsWith('bestmove')) {
-      bestMove = msg.split(' ')[1];
-      game.move(bestMove, { sloppy: true });
-      res.status(200).json({ 
-        move: bestMove,
-        fen: game.fen()
-      });
-      stockfish.terminate();
-    }
-  };
+    engine.postMessage('uci');
+    engine.postMessage('isready');
+    engine.postMessage(`position fen ${fen}`);
+    engine.postMessage('go depth 15');
+  });
 }
