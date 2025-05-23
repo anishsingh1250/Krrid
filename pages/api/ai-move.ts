@@ -1,7 +1,7 @@
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { Chess } from 'chess.js';
-import * as stockfish from 'stockfish';
+import stockfish from 'stockfish.js';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -18,13 +18,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(400).json({ message: 'Game is already over' });
   }
 
-  // Initialize Stockfish
   const engine = stockfish();
   
   return new Promise((resolve) => {
-    engine.onmessage = (event: any) => {
-      const message = event.data;
-      if (message.startsWith('bestmove')) {
+    engine.onmessage = (event) => {
+      const message = event;
+      if (typeof message === 'string' && message.startsWith('bestmove')) {
         const move = message.split(' ')[1];
         chess.move({
           from: move.substring(0, 2),

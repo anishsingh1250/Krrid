@@ -11,45 +11,51 @@
   --text: #0A0A0A;
 }
 
-body {
-  background-color: var(--background);
-  color: var(--text);
-  font-family: 'Inter', -apple-system, sans-serif;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-white text-black antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
 }
 
 @layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
   .hero-title {
-    @apply text-6xl md:text-7xl font-bold leading-tight;
+    @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight;
   }
 
   .hero-subtitle {
-    @apply text-lg md:text-xl text-gray-600 max-w-2xl mx-auto;
+    @apply text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto;
   }
 
   .btn-primary {
-    @apply bg-black text-white rounded-lg px-6 py-3 font-medium
-    transition-all duration-300 hover:scale-105 
-    focus:outline-none focus:ring-2 focus:ring-black/60;
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg
+    bg-primary text-white font-medium transition-all duration-300
+    hover:bg-primary/90 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary/50;
   }
 
   .btn-secondary {
-    @apply bg-gray-100 text-black rounded-lg px-6 py-3 
-    font-medium transition-all duration-300 
-    hover:bg-gray-200 focus:outline-none focus:ring-2;
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg
+    bg-gray-100 text-black font-medium transition-all duration-300
+    hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-200;
   }
 
   .nav-link {
-    @apply text-black/80 hover:text-black transition-colors duration-200 
-    font-medium;
-  }
-
-  .card {
-    @apply bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl
-    transition-all duration-300 border border-gray-100;
+    @apply text-black/80 hover:text-black transition-colors duration-200 font-medium;
   }
 
   .benefit-card {
-    @apply bg-white rounded-[32px] p-8 shadow-lg hover:shadow-xl
-    transition-all duration-300;
+    @apply bg-white rounded-[32px] p-6 sm:p-8 shadow-lg hover:shadow-xl
+    transition-all duration-300 flex flex-col gap-4;
   }
 }
