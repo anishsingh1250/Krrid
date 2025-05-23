@@ -1,0 +1,21 @@
+Error: supabaseUrl is required.
+    at new SupabaseClient (https://cefe7577-df39-4390-959e-5086258d5683-00-18kshp7t7jxjx.sisko.replit.dev/_next/static/chunks/node_modules_1bcee6d0._.js:5138:33)
+    at createClient (https://cefe7577-df39-4390-959e-5086258d5683-00-18kshp7t7jxjx.sisko.replit.dev/_next/static/chunks/node_modules_1bcee6d0._.js:5342:12)
+    at [project]/src/utils/supabaseClient.ts [app-client] (ecmascript) (https://cefe7577-df39-4390-959e-5086258d5683-00-18kshp7t7jxjx.sisko.replit.dev/_next/static/chunks/src_d0c8c37c._.js:227:225)
+    at https://cefe7577-df39-4390-959e-5086258d5683-00-18kshp7t7jxjx.sisko.replit.dev/_next/static/chunks/_93808211._.js:722:27
+    at runModuleExecutionHooks (https://cefe7577-df39-4390-959e-5086258d5683-00-18kshp7t7jxjx.sisko.replit.dev/_next/static/chunks/_93808211._.js:768:9)
+    at instantiateModule (https://cefe7577-df39-4390-959e-5086258d5683-00-18kshp7t7jxjx.sisko.replit.dev/_next/static/chunks/_93808211._.js:720:9)
+    at getOrInstantiateModuleFromParent (https://cefe7577-df39-4390-959e-5086258d5683-00-18kshp7t7jxjx.sisko.replit.dev/_next/static/chunks/_93808211._.js:653:12)
+    at esmImport (https://cefe7577-df39-4390-959e-5086258d5683-00-18kshp7t7jxjx.sisko.replit.dev/_next/static/chunks/_93808211._.js:143:20)
+    at [project]/src/app/page.tsx [app-client] (ecmascript) (https://cefe7577-df39-4390-959e-5086258d5683-00-18kshp7t7jxjx.sisko.replit.dev/_next/static/chunks/src_d0c8c37c._.js:250:159)
+    at https://cefe7577-df39-4390-959e-5086258d5683-00-18kshp7t7jxjx.sisko.replit.dev/_next/static/chunks/_93808211._.js:722:27
+    at runModuleExecutionHooks (https://cefe7577-df39-4390-959e-5086258d5683-00-18kshp7t7jxjx.sisko.replit.dev/_next/static/chunks/_93808211._.js:768:9)
+    at instantiateModule (https://cefe7577-df39-4390-959e-5086258d5683-00-18kshp7t7jxjx.sisko.replit.dev/_next/static/chunks/_93808211._.js:720:9)
+    at getOrInstantiateModuleFromParent (https://cefe7577-df39-4390-959e-5086258d5683-00-18kshp7t7jxjx.sisko.replit.dev/_next/static/chunks/_93808211._.js:653:12)
+    at commonJsRequire (https://cefe7577-df39-4390-959e-5086258d5683-00-18kshp7t7jxjx.sisko.replit.dev/_next/static/chunks/_93808211._.js:158:20)
+    at requireModule (https://cefe7577-df39-4390-959e-5086258d5683-00-18kshp7t7jxjx.sisko.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_2ce9398a._.js:16556:86)
+    at initializeModuleChunk (https://cefe7577-df39-4390-959e-5086258d5683-00-18kshp7t7jxjx.sisko.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_2ce9398a._.js:17104:25)
+    at resolveModuleChunk (https://cefe7577-df39-4390-959e-5086258d5683-00-18kshp7t7jxjx.sisko.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_2ce9398a._.js:17073:43)
+    at https://cefe7577-df39-4390-959e-5086258d5683-00-18kshp7t7jxjx.sisko.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_2ce9398a._.js:17447:24
+    at InnerLayoutRouter (https://cefe7577-df39-4390-959e-5086258d5683-00-18kshp7t7jxjx.sisko.replit.dev/_next/static/chunks/node_modules_next_dist_1a6ee436._.js:356:55)
+    at OuterLayoutRouter (https://cefe7577-df39-4390-959e-5086258d5683-00-18kshp7t7jxjx.sisko.replit.dev/_next/static/chunks/node_modules_next_dist_1a6ee436._.js:504:73)
