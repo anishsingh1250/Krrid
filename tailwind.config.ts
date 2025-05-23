@@ -1,31 +1,38 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
+    './public/index.html',
   ],
   theme: {
     extend: {
       colors: {
-        primary: 'var(--primary)',
-        secondary: 'var(--secondary)',
-        accent: 'var(--accent)',
-        background: 'var(--background)',
-        text: 'var(--text)',
+        primary: '#25C6F5', // Figma blue accent
+        black: '#181A1B',   // Deep black for text/background
+        white: '#FFFFFF',
+        gray: {
+          100: '#F5F7FA',  // Light gray for backgrounds
+          200: '#E5E7EB',
+          300: '#D1D5DB',
+          400: '#9CA3AF',
+        },
+        accent: '#FF3B3F', // Red accent for highlights
       },
       fontFamily: {
-        heading: ['var(--font-geist-sans)', 'system-ui', 'sans-serif'],
-        body: ['var(--font-geist-sans)', 'system-ui', 'sans-serif'],
+        heading: ['Poppins', 'Montserrat', 'Inter', 'sans-serif'],
+        body: ['Inter', 'system-ui', 'sans-serif'],
+        special: ['Georgia', 'serif'], // For italic Krrid
       },
-      spacing: {
-        '128': '32rem',
+      borderRadius: {
+        xl: '2rem', // For large rounded cards/sections
+      },
+      boxShadow: {
+        card: '0 4px 24px 0 rgba(0,0,0,0.08)',
       },
     },
   },
   plugins: [],
-}
+};
 
-export default config
+export default config; 

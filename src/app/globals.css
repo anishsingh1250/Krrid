@@ -5,57 +5,46 @@
 
 :root {
   --primary: #25C6F5;
-  --secondary: #0A0A0A;
+  --secondary: #0F172A;
   --accent: #FF3B3F;
   --background: #ffffff;
-  --text: #0A0A0A;
+  --text: #181A1B;
 }
 
-@layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    @apply bg-background text-text antialiased;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-heading font-bold;
-  }
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
 }
 
 @layer components {
-  .container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
-  }
-
-  .hero-title {
-    @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight;
-  }
-
-  .hero-subtitle {
-    @apply text-lg sm:text-xl md:text-2xl text-gray-600 max-w-2xl mx-auto;
-  }
-
   .btn-primary {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg 
-    bg-primary text-white font-medium transition-all duration-300
-    hover:bg-primary/90 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary/50;
+    @apply bg-primary text-white rounded-lg px-6 py-3 font-heading font-semibold 
+    transition-all duration-300 hover:scale-105 hover:shadow-lg
+    focus:outline-none focus:ring-2 focus:ring-primary/60;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg
-    bg-gray-100 text-text font-medium transition-all duration-300
-    hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-200;
+    @apply bg-white text-black border-2 border-black/10 rounded-lg px-6 py-3 
+    font-heading font-semibold transition-all duration-300 
+    hover:border-primary hover:text-primary focus:outline-none focus:ring-2;
   }
 
   .nav-link {
-    @apply text-text/80 hover:text-text transition-colors duration-200 font-medium;
+    @apply text-black/80 hover:text-primary transition-colors duration-200 
+    font-medium relative after:absolute after:bottom-0 after:left-0 
+    after:h-0.5 after:w-0 hover:after:w-full after:bg-primary 
+    after:transition-all after:duration-300;
   }
 
-  .benefit-card {
-    @apply bg-background rounded-[32px] p-6 sm:p-8 shadow-lg hover:shadow-xl
-    transition-all duration-300 flex flex-col gap-4;
+  .input-field {
+    @apply w-full px-4 py-3 rounded-lg border border-gray-200 
+    focus:ring-2 focus:ring-primary/60 focus:border-transparent 
+    transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-white rounded-xl p-6 shadow-sm hover:shadow-md 
+    transition-all duration-300 border border-gray-100;
   }
 }
