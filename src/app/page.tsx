@@ -67,10 +67,10 @@ export default function Home() {
           <Image src="/logo.svg" alt="Krrid Logo" width={80} height={40} />
         </div>
         <ul className="hidden md:flex gap-8 font-heading text-black text-sm">
-          <li className={`transition-colors duration-200 cursor-pointer ${activeSection === "about" ? "text-primary font-bold" : "hover:text-primary"}`} onClick={() => scrollToSection(aboutRef)}>About Us</li>
-          <li className={`transition-colors duration-200 cursor-pointer ${activeSection === "plans" ? "text-primary font-bold" : "hover:text-primary"}`} onClick={() => scrollToSection(plansRef)}>Plans</li>
-          <li className={`transition-colors duration-200 cursor-pointer ${activeSection === "courses" ? "text-primary font-bold" : "hover:text-primary"}`} onClick={() => scrollToSection(coursesRef)}>Courses</li>
-          <li className={`transition-colors duration-200 cursor-pointer ${activeSection === "contact" ? "text-primary font-bold" : "hover:text-primary"}`} onClick={() => scrollToSection(contactRef)}>Contact Us</li>
+          <Link href="/about" className={`transition-colors duration-200 cursor-pointer hover:text-primary`}>About Us</Link>
+          <Link href="/plans" className={`transition-colors duration-200 cursor-pointer hover:text-primary`}>Plans</Link>
+          <Link href="/courses" className={`transition-colors duration-200 cursor-pointer hover:text-primary`}>Courses</Link>
+          <Link href="/contact" className={`transition-colors duration-200 cursor-pointer hover:text-primary`}>Contact Us</Link>
         </ul>
         <div className="flex gap-3">
           <Link href="/auth">
