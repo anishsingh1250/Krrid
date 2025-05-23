@@ -22,4 +22,4 @@ mode = "sequential"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "HOST=0.0.0.0 npm run dev"
+args = "HOST=0.0.0.0 PORT=3000 npm run dev"
