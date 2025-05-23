@@ -1,8 +1,17 @@
 import { useEffect, useState, useCallback } from "react";
 import { supabase } from "@/utils/supabaseClient";
 
-export function useRealtimeChessGame(gameId: string, userId: string) {
-  const [game, setGame] = useState<any>(null);
+interface GameState {
+  id: string;
+  fen: string;
+  turn: 'w' | 'b';
+  moves: string[];
+  player_white: string;
+  player_black: string | null;
+}
+
+export function useRealtimeChessGame(gameId: string) {
+  const [game, setGame] = useState<GameState | null>(null);
 
   // Fetch initial game state
   useEffect(() => {

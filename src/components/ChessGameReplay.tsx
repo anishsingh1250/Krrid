@@ -10,7 +10,21 @@ type GameType = "bullet" | "blitz" | "rapid" | "classical" | "correspondence" | 
 export default function ChessGameReplay() {
   const [fen, setFen] = useState<string>("start");
   const [pgn, setPgn] = useState<string>("");
-  const [gameInfo, setGameInfo] = useState<any>(null);
+  interface GameInfo {
+    white: string;
+    black: string;
+    date: string;
+    result: string;
+    event: string;
+    eco: string;
+    opening: string | null;
+    whiteElo: string;
+    blackElo: string;
+    timeControl: string;
+    termination: string;
+    link: string | null;
+  }
+  const [gameInfo, setGameInfo] = useState<GameInfo | null>(null);
   const [moves, setMoves] = useState<string[]>([]);
   const [currentMoveIndex, setCurrentMoveIndex] = useState(-1);
   const [isPlaying, setIsPlaying] = useState(false);

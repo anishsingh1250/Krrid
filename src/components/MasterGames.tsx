@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import { FaSearch, FaStar, FaChess, FaUndo, FaStepBackward, FaStepForward, FaPause, FaPlay } from "react-icons/fa";
 
 // Dynamically import Chessboard to avoid SSR issues
-const Chessboard = dynamic(() => import("chessboardjsx"), { 
+const Chessboard = dynamic(() => import("react-chessboard").then(mod => mod.Chessboard), { 
   ssr: false 
 });
 
