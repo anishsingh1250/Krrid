@@ -1,0 +1,107 @@
+[15:58:46.031] Running build in Washington, D.C., USA (East) – iad1
+[15:58:46.032] Build machine configuration: 2 cores, 8 GB
+[15:58:46.065] Cloning github.com/anishsingh1250/Krrid (Branch: main, Commit: 9f10adc)
+[15:58:46.322] Previous build caches not available
+[15:58:50.512] Cloning completed: 4.447s
+[15:58:50.863] Running "vercel build"
+[15:58:51.293] Vercel CLI 42.1.1
+[15:58:51.663] Installing dependencies...
+[15:58:55.425] npm warn deprecated lodash.isequal@4.5.0: This package is deprecated. Use require('node:util').isDeepStrictEqual instead.
+[15:59:07.164] 
+[15:59:07.165] added 465 packages in 15s
+[15:59:07.165] 
+[15:59:07.165] 142 packages are looking for funding
+[15:59:07.166]   run `npm fund` for details
+[15:59:07.226] Detected Next.js version: 15.3.2
+[15:59:07.231] Running "npm run build"
+[15:59:07.359] 
+[15:59:07.359] > krrid-app@0.1.0 build
+[15:59:07.359] > next build
+[15:59:07.359] 
+[15:59:08.000] Attention: Next.js now collects completely anonymous telemetry regarding usage.
+[15:59:08.001] This information is used to shape Next.js' roadmap and prioritize features.
+[15:59:08.001] You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+[15:59:08.001] https://nextjs.org/telemetry
+[15:59:08.001] 
+[15:59:08.128]    ▲ Next.js 15.3.2
+[15:59:08.129] 
+[15:59:08.164]    Creating an optimized production build ...
+[15:59:27.716]  ✓ Compiled successfully in 16.0s
+[15:59:27.723]    Linting and checking validity of types ...
+[15:59:33.540] 
+[15:59:33.544] Failed to compile.
+[15:59:33.544] 
+[15:59:33.545] ./src/app/chess/MultiplayerLobby.tsx
+[15:59:33.545] 13:19  Error: 'error' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+[15:59:33.545] 
+[15:59:33.545] ./src/app/chess/page.tsx
+[15:59:33.545] 8:8  Error: 'DndProviderWrapper' is defined but never used.  @typescript-eslint/no-unused-vars
+[15:59:33.545] 
+[15:59:33.545] ./src/app/dashboard/admin/page.tsx
+[15:59:33.545] 8:36  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+[15:59:33.545] 
+[15:59:33.546] ./src/app/dashboard/page.tsx
+[15:59:33.546] 8:36  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+[15:59:33.546] 
+[15:59:33.546] ./src/app/dashboard/student/page.tsx
+[15:59:33.546] 8:36  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+[15:59:33.546] 50:44  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+[15:59:33.546] 
+[15:59:33.551] ./src/app/dashboard/teacher/page.tsx
+[15:59:33.551] 8:36  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+[15:59:33.552] 
+[15:59:33.552] ./src/app/page.tsx
+[15:59:33.552] 13:10  Error: 'user' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+[15:59:33.552] 13:36  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+[15:59:33.552] 48:43  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+[15:59:33.552] 160:57  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+[15:59:33.552] 205:96  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+[15:59:33.552] 208:80  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+[15:59:33.552] 210:78  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+[15:59:33.552] 217:153  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+[15:59:33.552] 217:193  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+[15:59:33.552] 217:203  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+[15:59:33.552] 217:208  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+[15:59:33.552] 217:216  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+[15:59:33.553] 217:228  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+[15:59:33.553] 250:87  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+[15:59:33.553] 
+[15:59:33.553] ./src/components/ChessGameReplay.tsx
+[15:59:33.553] 13:44  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+[15:59:33.553] 30:6  Warning: React Hook useEffect has a missing dependency: 'fetchGame'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+[15:59:33.553] 107:7  Error: 'errorMsg' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+[15:59:33.553] 156:28  Error: 'sourceSquare' is defined but never used.  @typescript-eslint/no-unused-vars
+[15:59:33.553] 156:50  Error: 'targetSquare' is defined but never used.  @typescript-eslint/no-unused-vars
+[15:59:33.553] 
+[15:59:33.554] ./src/components/ChessPuzzle.tsx
+[15:59:33.554] 20:48  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+[15:59:33.555] 143:60  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+[15:59:33.555] 
+[15:59:33.555] ./src/components/ChessReplay.tsx
+[15:59:33.555] 10:9  Error: 'gameRef' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+[15:59:33.555] 
+[15:59:33.555] ./src/components/ChessboardUI.tsx
+[15:59:33.555] 2:20  Error: 'useRef' is defined but never used.  @typescript-eslint/no-unused-vars
+[15:59:33.558] 9:34  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+[15:59:33.558] 10:11  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+[15:59:33.558] 63:6  Warning: React Hook useEffect has a missing dependency: 'game'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+[15:59:33.558] 78:9  Error: Expected an assignment or function call and instead saw an expression.  @typescript-eslint/no-unused-expressions
+[15:59:33.558] 105:54  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+[15:59:33.558] 116:65  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+[15:59:33.558] 
+[15:59:33.558] ./src/components/MasterGames.tsx
+[15:59:33.558] 12:7  Error: 'ChessGameReplay' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+[15:59:33.559] 72:52  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+[15:59:33.559] 90:27  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+[15:59:33.559] 196:26  Error: A `require()` style import is forbidden.  @typescript-eslint/no-require-imports
+[15:59:33.559] 228:28  Error: A `require()` style import is forbidden.  @typescript-eslint/no-require-imports
+[15:59:33.559] 
+[15:59:33.559] ./src/hooks/useRealtimeChessGame.ts
+[15:59:33.559] 4:54  Error: 'userId' is defined but never used.  @typescript-eslint/no-unused-vars
+[15:59:33.560] 5:36  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+[15:59:33.560] 34:31  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+[15:59:33.560] 
+[15:59:33.560] info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
+[15:59:33.588] Error: Command "npm run build" exited with 1
+[15:59:33.852] 
+[15:59:37.062] Exiting build container
