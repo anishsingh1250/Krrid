@@ -1,9 +1,11 @@
 
-import type { Config } from 'tailwindcss';
+import type { Config } from 'tailwindcss'
 
 const config: Config = {
   content: [
-    './src/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
@@ -26,8 +28,8 @@ const config: Config = {
         accent: '#FF3B3F',
       },
       fontFamily: {
-        heading: ['Poppins', 'system-ui', 'sans-serif'],
-        body: ['Inter', 'system-ui', 'sans-serif'],
+        heading: ['var(--font-geist-sans)', 'system-ui', 'sans-serif'],
+        body: ['var(--font-geist-sans)', 'system-ui', 'sans-serif'],
       },
       spacing: {
         '128': '32rem',
@@ -35,6 +37,6 @@ const config: Config = {
     },
   },
   plugins: [],
-};
+}
 
-export default config;
+export default config
